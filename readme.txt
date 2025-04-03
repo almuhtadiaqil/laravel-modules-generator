@@ -13,3 +13,5 @@ Controller :
 
 Interface :
  - place your class abstract / contract here
+
+ please add your new module service provider to config/app.php on providers propertiy
