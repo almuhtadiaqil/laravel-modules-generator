@@ -1,0 +1,38 @@
+<?php
+namespace Modules\{{module}}\Repositories;
+use Modules\{{module}}\Interfaces\{{module}}RepositoryInterface;
+use Modules\{{module}}\Models\{{module}};
+
+class {{module}}Repository implements {{module}}RepositoryInterface
+{
+    private {{module}} $model;
+    public function __construct({{module}} $model)
+    {
+        $this->model = $model;
+    }
+
+    public function index()
+    {
+        // TODO: Implement index() method.
+    }
+
+    public function store($request)
+    {
+        // TODO: Implement store() method.
+    }
+
+    public function detail($id)
+    {
+        // TODO: Implement detail() method.
+    }
+
+    public function update($request, $id)
+    {
+        // TODO: Implement update() method.
+    }
+
+    public function delete($id)
+    {
+        // TODO: Implement delete() method.
+    }
+}

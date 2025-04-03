@@ -1,0 +1,24 @@
+<?php
+
+namespace Modules\{{module}}\Providers;
+use Modules\{{module}}\Controllers\{{module}}Controller;
+use Modules\{{module}}\Interfaces\{{module}}ControllerInterface;
+use Modules\{{module}}\Interfaces\{{module}}RepositoryInterface;
+use Modules\{{module}}\Interfaces\{{module}}ServiceInterface;
+use Modules\{{module}}\Repositories\{{module}}Repository;
+use Modules\{{module}}\Services\{{module}}Service;
+use Illuminate\Support\ServiceProvider;
+
+class {{module}}ServiceProvider extends ServiceProvider
+{
+    public function register(){
+        $this->app->singleton({{module}}RepositoryInterface::class,{{module}}Repository::class);
+        $this->app->singleton({{module}}ServiceInterface::class,{{module}}Service::class);
+        $this->app->singleton({{module}}ControllerInterface::class,{{module}}Controller::class);
+    }
+
+    public function boot(){
+        $this->loadRoutesFrom(module_path('Auth','Routes/api.php'));
+    }
+
+}

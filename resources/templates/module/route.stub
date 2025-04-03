@@ -1,0 +1,8 @@
+<?php
+namespace Modules\{{module}}\Routes;
+use Modules\{{module}}\Interfaces\{{module}}ControllerInterface;
+use Illuminate\Support\Facades\Route;
+
+Route::prefix(strtolower('{{module}}'))->group(function() {
+    Route::get('/', [{{module}}ControllerInterface::class, 'index']);
+});
